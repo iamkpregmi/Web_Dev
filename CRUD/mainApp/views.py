@@ -5,6 +5,16 @@ def home(request):
     emp_data = Employee.objects.all()
     return render(request,"index.html",{"emp_data":emp_data})
 
+def Search(request):
+    if request.method == "POST":
+        name = request.POST.get("name")
+        if (name != None):
+            emp_data = Employee.objects.filter(Name__contains=name)
+            return render(request,"index.html",{"emp_data":emp_data})
+        else:
+            pass
+    return redirect("/")
+
 def add_employee(request):
     if request.method == 'POST':
         empobj = Employee()

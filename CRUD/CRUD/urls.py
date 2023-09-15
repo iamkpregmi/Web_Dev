@@ -21,6 +21,7 @@ from mainApp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",views.home),
+    path("Search/",views.Search),
     path("add_employee/",views.add_employee),
     path("edit_employee/<int:emp_id>",views.edit_employee),
     path("delete_employee/<int:emp_id>",views.delete_employee),
