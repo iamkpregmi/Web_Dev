@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.maincontainer{
+    background-image: url("/images/Background-texture-wood.jpg");
+    width: 100vw;
+    height: 100vh;
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.contentcontainer{
+    background-color: white;
+    margin-top: 5%;
+    width: 800px;
+    height: 630px;
+    padding: 0px;
+    box-shadow: 5px 5px 6px black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.myheading{
+    margin: 0;
+    display: flex;
+    width: auto;
+    height: auto;
+}
+.myheading img{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+.myheading h1{
+    color: white;
+    position: absolute;
+    margin-top: 4%;
+    margin-left: 5%;
+    font-size: 3.0em;
+    font-family: 'Trebuchet MS', 'sans-serif';
+}
+.mycontent{
+    display: flex;
+    flex-direction: row;
+    margin-top: 8%;
+}
+.left{
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+}
+.tabletwo table{
+    margin-left: 15px;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    gap: 12px;
+}
+.right h2{
+    color: #CD5C5C;
+}
+.right button{
+    color: #FFFFFF;
+    background-color: #CD5C5C;
+    border: 1px solid #f08080;
+    font-size: 15px;
+    padding: 4px 4px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.right input{
+    border: 1px solid black;
+    border-radius: 2px;
+    height: 20px;
+    padding-left: 10px;
+}

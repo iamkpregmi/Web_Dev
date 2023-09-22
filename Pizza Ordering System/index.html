@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Krishna Prasad Regmi">
+    <title>Pizza Ordering System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="myjs.js"></script>
+</head>
+<body>
+    <div class="maincontainer">
+        <div class="contentcontainer">
+            <div class="myheading">
+                <img src="/images/pizzaheading.jpg" alt="image not found">
+                <h1>Asian Pizza</h1>
+            </div>
+            <div class="mycontent">
+                <div class="left">
+                    <div class="tableone">
+                        <table border="1px">
+                            <th>Pizza Type</th>
+                            <th>Prices</th>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="Choice1" name="Pizza" value="50.00">
+                                    <label for="Choice1">Hawaiian</label>
+                                </td>
+                                <td>
+                                    $ 50.00
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="Choice2" name="Pizza" value="60.00">
+                                    <label for="Choice2">BBQ Chicken</label>
+                                </td>
+                                <td>
+                                    $ 60.00
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="Choice3" name="Pizza" value="70.00">
+                                    <label for="Choice3">Margarita</label>
+                                </td>
+                                <td>
+                                    $ 70.00
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="Choice4" name="Pizza" value="80.00">
+                                    <label for="Choice4">Vegetarian</label>
+                                </td>
+                                <td>
+                                    $ 80.00
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="Choice5" name="Pizza" value="90.00">
+                                    <label for="Choice5">Aussie</label>
+                                </td>
+                                <td>
+                                    $ 90.00
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="Choice6" name="Pizza" value="100.00">
+                                    <label for="Choice6">Supreme</label>
+                                </td>
+                                <td>
+                                    $ 100.00
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" id="Choice7" name="Pizza" value="110.00">
+                                    <label for="Choice7">Pepperoni</label>
+                                </td>
+                                <td>
+                                    $ 110.00
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="tabletwo">
+                        <table border="1px">
+                            <tr>
+                                <th>Extra Toppings</th>
+                                <th>Prices</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="e1" name="extra" value="5.00">
+                                    <label for="e1">Extra Cheese</label>
+                                </td>
+                                <td>$ 5.00</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="e2" name="extra" value="10.00">
+                                    <label for="e2">Anchovies</label>
+                                </td>
+                                <td>$ 10.00</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="e3" name="extra" value="15.00">
+                                    <label for="e3">Olives</label>
+                                </td>
+                                <td>$ 15.00</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="e4" name="extra" value="20.00">
+                                    <label for="e4">Mushrooms</label>
+                                </td>
+                                <td>$ 20.00</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="e5" name="extra" value="25.00">
+                                    <label for="e5">Hot Salami</label>
+                                </td>
+                                <td>$ 25.00</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="e6" name="extra" value="30.00">
+                                    <label for="e6">Pineapples</label>
+                                </td>
+                                <td>$ 30.00</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="e7" name="extra" value="35.00">
+                                    <label for="e7">Chili</label>
+                                </td>
+                                <td>$ 35.00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="right">
+                    <h2>TOTAL PRICE</h2>
+                    <input type="text" id="final_Price" name="final_Price" value="0.00" disabled>
+                    <button type="button" onclick="calculate()">Calculate</button>
+                    <button type="button" onclick="clear_Price()">Clear</button>
+                    <button type="button" onclick="exit()">Exit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
