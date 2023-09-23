@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .maincontainer{
+            background-color: white;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+        .content_box{
+            margin-top: 50px;
+            width: 45%;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+        }
+        .content_box #firsthead{
+            color: gray;
+            text-align: center;
+        }
+        .content_box #secondhead{
+            color: black;
+            text-align: center;
+        }
+        .mycontent{
+            margin-top: 50px;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-left: 27%;
+        }
+        .mycontent #first_name,#last_name,#eamil,#job_title,#company,#country{
+            width: 60%;
+            height: 1.5rem;
+        }
+        .mycontent #submit{
+            width: 150px;
+            height: 1.8rem;
+            background-color: #0d539f;
+            color: white;
+            font-size: large;
+            border: 2px solid #0d539f;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="maincontainer">
+        <div class="content_box">
+            <div class="heading">
+                <h1 id="firsthead" >Are you ready to be among the corporate leaders who are forging a future for all?</h1>
+                <h1 id="secondhead" >Contact Us Now</h1>
+            </div>
+            <div class="mycontent">
+                    <input type="text" name="first_name" id="first_name" placeholder="First Name">
+                    <input type="text" name="last_name" id="last_name" placeholder="Last Name">
+                    <input type="email" name="email" id="eamil" placeholder="Work Email">
+                    <input type="text" name="job_title" id="job_title" placeholder="Job Title">
+                    <input type="text" name="company" id="company" placeholder="Company">
+                    <select name="country" id="country">
+                        <option selected disabled >Country</option>
+                        <option value="India">India</option>
+                        <option value="India">USA</option>
+                        <option value="India">China</option>
+                        <option value="India">Japan</option>
+                    </select>
+                    <div>
+                        <input type="checkbox" name="terms" id="terms">
+                        <label for="terms">
+                            I confirm, I have read and agree to <a href="#">Privacy Policy</a> and consent to sharing my information.
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="update" id="update" checked>
+                        <label for="update">
+                            I would like to receive alerts and updates.
+                        </label>
+                    </div>
+                    <input type="submit" name="submit" id="submit" value="Submit">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
