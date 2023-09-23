@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        #first{
+            background-color: yellow;
+        }
+        #second{
+            display: inline;
+            background-color: orange;
+        }
+        #third:hover{
+            background-color: yellow;
+        }
+
+        .green::selection {
+            background-color: green;
+            color: white;
+        }
+
+        .red::selection {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p id="first">This is the Block label Content</p>
+    <p id="second">This is the incline label content</p>
+    <pre>this is the pre tag
+    this is the another line
+    </pre>
+    <details>
+        <summary>Summary 1</summary>
+        <p>This is the details of first tab summary</p>
+    </details>
+    <details>
+        <summary>Summary 2</summary>
+        <p>This is the details of second tab summary</p>
+    </details>
+    <h2 id="third">Hover mouse over me</h2>
+    <p class="green">Select this text to see a yellow background.</p>
+    <p class="red">Select this text to see the orange font color.</p>
+</body>
+</html>
