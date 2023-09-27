@@ -1,0 +1,95 @@
+<!-- Reference -->
+https://css-tricks.com/the-shapes-of-css/
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape</title>
+    <style>
+        #square{
+            background-color: black;
+            color: white;
+            width: 100px;
+            height: 100px;
+        }
+
+        #rectangle{
+            background-color: black;
+            color: white;
+            width: 200px;
+            height: 100px;
+        }
+
+        #circle{
+            background-color: black;
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        #Oval{
+            background-color: black;
+            color: white;
+            width: 200px;
+            height: 100px;
+            /* border-radius: 100px/50px; */
+            border-radius: 50%;
+        }
+
+        #triangleup{
+            width: 0;
+            height: 0;
+            border-left:50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid red;
+        }
+
+        #triangledown{
+            width: 0;
+            height: 0;
+            border-left:50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 100px solid black;
+        }
+
+        #triangleleft{
+            width: 0;
+            height: 0;
+            border-top:50px solid transparent;
+            border-bottom: 50px solid transparent;
+            border-right: 100px solid red;
+        }
+        #triangleright{
+            width: 0;
+            height: 0;
+            border-top:50px solid transparent;
+            border-bottom: 50px solid transparent;
+            border-left: 100px solid black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="square">Square</div>
+    <br>
+    <div id="rectangle">Rectangle</div>
+    <br>
+    <div id="circle">Circle</div>
+    <br>
+    <div id="Oval">Oval</div>
+    <br>
+    <div id="triangleup">triangleup</div>
+    <br>
+    <div id="triangledown">triangledown</div>
+    <br>
+    <div id="triangleleft">triangleleft</div>
+    <br>
+    <div id="triangleright">triangleright</div>
+    <br>
+</body>
+
+</html>
