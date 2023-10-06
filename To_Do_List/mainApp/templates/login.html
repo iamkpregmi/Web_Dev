@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Login</title>
+{% endblock %}
+
+{% block content %}
+<br><br>
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{ message }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>    
+    {% endfor %}
+{% endif %}
+<div class="container col-4 mt-5 card p-3 shadow-lg">
+    <h2>User Login</h2>
+    <hr>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="Username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="Username" name="username" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+        &nbsp;&nbsp;
+        <a href="/my_signup/" class="text-decoration-none">Don't have a account? Register</a>
+    </form>
+</div>
+{% endblock %}

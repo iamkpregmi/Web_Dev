@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Contact</title>
+{% endblock %}
+
+{% block content %}
+<br><br>
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{ message }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>    
+    {% endfor %}
+{% endif %}
+<div class="container mt-4 col-6">
+    <h2 class="text-center fs-1 fw-bold">Contact Us</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Name</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name" name="name" required>
+        </div><br>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email" required>
+        </div><br>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea2">Elaborate Your Concern</label>
+            <textarea class="form-control" id="exampleFormControlTextarea2" rows="3" style="height: 200px;" name="msg" required></textarea>
+        </div><br>
+        <input class="btn btn-success" type="submit" value="Submit">
+    </form>
+</div>
+{% endblock %}

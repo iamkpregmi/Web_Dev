@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Dashboard</title>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-5">
+    <div class="container col-6">
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="title" class="form-label">Enter title Here</label>
+                <input type="text" class="form-control border-dark" id="title" name="title" aria-describedby="emailHelp" value='{{to_do_data.title}}' required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Description</label><br>
+                <textarea name="description" id="description" cols="123" rows="5" required>{{to_do_data.desc}}</textarea>
+            </div>
+            <input class="btn btn-warning" type="submit" name="submit" id="submit" value="Update">
+        </form>
+    </div>
+</div>
+{% endblock %}

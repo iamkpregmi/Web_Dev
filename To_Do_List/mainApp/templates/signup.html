@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Signup</title>
+{% endblock %}
+
+{% block content %}
+<br><br>
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{ message }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>    
+    {% endfor %}
+{% endif %}
+<div class="container col-4 mt-5 card p-3 shadow-lg">
+    <h2>User Register</h2>
+    <hr>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="Username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="Username" name="username" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="cpassword">
+        </div>
+        <button type="submit" class="btn btn-success btn-block">Register</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="reset" class="btn btn-danger btn-block" value="Clear">
+        &nbsp;&nbsp;
+        <a href="/user_login/" class="text-decoration-none">Already User? Login</a>
+</form>
+</div>
+{% endblock %}
