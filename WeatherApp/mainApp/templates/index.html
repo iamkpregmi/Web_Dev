@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .maincontainer {
+            background-image: linear-gradient(to right top, #81b9d6, #7eb7da, #7cb4de, #7db1e1, #7fade4, #9aa9e8, #b7a4e5, #d29edc, #f89abf, #ffa19b, #feb37e, #e1c974);
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mycontent {
+            background-color: bisque;
+            box-shadow: 2px 2px 10px black;
+            border-radius: 10px;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .first {
+            border-radius: 10px 10px 0px 0px;
+            height: 25%;
+            background-color: #4b69d9;
+        }
+
+        .first h4 {
+            text-align: center;
+            font-size: 30px;
+            color: white;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .first #cityname {
+            border: 1px solid #4b69d9;
+            border-radius: 5px;
+            width: 60%;
+            height: 25px;
+            margin-left: 20px;
+        }
+
+        .first #submit {
+            border: 1px solid #4b69d9;
+            border-radius: 10px;
+            width: 25%;
+            height: 30px;
+        }
+
+        .second {
+            height: 75%;
+            margin-top: 20px;
+            margin-left: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="maincontainer">
+        <div class="mycontent">
+            <div class="first">
+                <h4>Weather App</h4>
+                <form method="post">
+                    {% csrf_token %}
+                    <input id="cityname" type="text" name="cityname" placeholder="Enter City name to Search"
+                        value="{{ city }}" required>
+                    <input id="submit" type="submit" value="Search">
+                </form>
+            </div>
+            <div class="second">
+                Country Code: {{ country_code }}
+                <br><br>
+                Weather: {{ weather }}
+                <br><br>
+                Temperature: {{ temp }} <sup>o</sup>C
+                <br><br>
+                Minimum temperature: {{ temp_min }} <sup>o</sup>C
+                <br><br>
+                Maximum temperature: {{ temp_max }} <sup>o</sup>C
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
